@@ -20,6 +20,7 @@ import ReactDOM from "react-dom";
 import App from "next/app";
 import Head from "next/head";
 import Router from "next/router";
+import { AppProvider } from 'components/context/index';
 
 import PageChange from "components/PageChange/PageChange.js";
 
@@ -76,12 +77,12 @@ export default class MyApp extends App {
     const { Component, pageProps } = this.props;
 
     return (
-      <React.Fragment>
+      <AppProvider>
         <Head>
-          <title>NextJS Material Kit by Creative Tim</title>
+          <title>Sleep Shift App - System Health Lab</title>
         </Head>
         <Component {...pageProps} />
-      </React.Fragment>
+      </AppProvider>
     );
   }
 }
