@@ -4,7 +4,6 @@ import 'firebase/database';
 import 'firebase/auth';
 
 // Your web app's Firebase configuration
-console.log(process.env)
 const firebaseConfig = {
     apiKey: process.env.NEXT_PUBLIC_APIKEY,
     authDomain: process.env.NEXT_PUBLIC_AUTHDOMAIN,
