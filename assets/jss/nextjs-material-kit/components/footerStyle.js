@@ -1,5 +1,4 @@
 import { container, primaryColor } from "assets/jss/nextjs-material-kit.js";
-console.log(primaryColor)
 const footerStyle = {
   block: {
     color: "inherit",

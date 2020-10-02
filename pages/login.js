@@ -30,8 +30,6 @@ export default function LoginPage(props) {
   const [cardAnimaton, setCardAnimation] = React.useState("cardHidden");
   const contextObj = useContext(Context)
   const { googleOAuthSubmit } = contextObj
-  console.log('contextObj: ', contextObj);
-  console.log(googleOAuthSubmit)
   setTimeout(function () {
     setCardAnimation("");
   }, 700);
@@ -39,13 +37,6 @@ export default function LoginPage(props) {
   const { ...rest } = props;
   return (
     <div>
-      <Header
-        absolute
-        color="transparent"
-        brand="NextJS Material Kit"
-        rightLinks={<HeaderLinks />}
-        {...rest}
-      />
       <div
         className={classes.pageHeader}
         style={{
@@ -78,7 +69,6 @@ export default function LoginPage(props) {
             </GridItem>
           </GridContainer>
         </div>
-        <Footer whiteFont />
       </div>
     </div>
   );
