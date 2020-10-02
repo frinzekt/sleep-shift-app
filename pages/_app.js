@@ -22,6 +22,12 @@ import Head from "next/head";
 import Router from "next/router";
 import { AppProvider } from 'components/context/index';
 
+// OWN COMPONENTS
+import Navbar from 'components/Layout/Navbar';
+import Footer from "components/Footer/Footer.js";
+
+
+
 import PageChange from "components/PageChange/PageChange.js";
 
 import "assets/scss/nextjs-material-kit.scss?v=1.1.0";
@@ -81,7 +87,9 @@ export default class MyApp extends App {
         <Head>
           <title>Sleep Shift App - System Health Lab</title>
         </Head>
+        <Navbar></Navbar>
         <Component {...pageProps} />
+        <Footer />
       </AppProvider>
     );
   }

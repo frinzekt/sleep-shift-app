@@ -1,5 +1,5 @@
 import { container, primaryColor } from "assets/jss/nextjs-material-kit.js";
-
+console.log(primaryColor)
 const footerStyle = {
   block: {
     color: "inherit",
@@ -36,7 +36,8 @@ const footerStyle = {
   footerWhiteFont: {
     "&,&:hover,&:focus": {
       color: "#FFFFFF"
-    }
+    },
+    backgroundColor:"#D95B36",
   },
   container,
   list: {

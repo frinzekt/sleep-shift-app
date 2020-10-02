@@ -8,11 +8,9 @@ import { makeStyles } from "@material-ui/core/styles";
 
 // core components
 import Header from "components/Header/Header.js";
-import Footer from "components/Footer/Footer.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Button from "components/CustomButtons/Button.js";
-import HeaderLinks from "components/Header/HeaderLinks.js";
 import Parallax from "components/Parallax/Parallax.js";
 
 import styles from "assets/jss/nextjs-material-kit/pages/landingPage.js";
@@ -31,39 +29,25 @@ export default function LandingPage(props) {
   const { ...rest } = props;
   return (
     <div>
-      <Header
-        color="transparent"
-        routes={dashboardRoutes}
-        brand="NextJS Material Kit"
-        rightLinks={<HeaderLinks />}
-        fixed
-        changeColorOnScroll={{
-          height: 400,
-          color: "white"
-        }}
-        {...rest}
-      />
+
       <Parallax filter responsive image={require("assets/img/landing-bg.jpg")}>
         <div className={classes.container}>
           <GridContainer>
-            <GridItem xs={12} sm={12} md={6}>
-              <h1 className={classes.title}>Your Story Starts With Us.</h1>
+            <GridItem >
+              <h1 className={classes.title}>Sleep Shift Scheduling Tool</h1>
               <h4>
-                Every landing page needs a small description after the big bold
-                title, that{"'"}s why we added this text here. Add here all the
-                information that can make you or your product create the first
-                impression.
+                Sleep loss and fatigue may lead to reduced performance and an increased risk to safety during many activities, including spaceflight. Your challenge is to develop an operational sleep shift scheduling tool that provides autonomous customization of a schedule for sleep, exercise, and nutrition to manage fatigue.
               </h4>
               <br />
               <Button
-                color="danger"
+                color="primary"
                 size="lg"
                 href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ref=creativetim"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <i className="fas fa-play" />
-                Watch video
+                Get Started
               </Button>
             </GridItem>
           </GridContainer>
@@ -76,7 +60,6 @@ export default function LandingPage(props) {
           <WorkSection />
         </div>
       </div>
-      <Footer />
     </div>
   );
 }
